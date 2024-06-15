@@ -32,7 +32,7 @@ jobs:
           python-version: 3.8
       - name: install libraries
         run: |
-          cd functions
+          cd function
           python -m pip install --upgrade pip
           if [ -r requirements.txt ]; then pip install -r requirements.txt -f; fi  
             
