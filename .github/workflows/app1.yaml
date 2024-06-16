@@ -34,6 +34,11 @@ jobs:
         run: |
           cd function
           python -m pip install --upgrade pip
-          if [ -r requirements.txt ]; then pip install -r requirements.txt -t .; fi  
+          if [ -r requirements.txt ]; then pip install -r requirements.txt -t .; fi
+      - name: Zip Bundle
+        run: |
+          cd function
+          zip -r ../${{ github.sha }}.zip .
+          
             
  
